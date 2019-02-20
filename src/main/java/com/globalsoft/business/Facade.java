@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.Map;
 
 import com.globalsoft.dao.CategoryDAO;
+import com.globalsoft.dao.CentroCustoDAO;
 import com.globalsoft.dao.ClientDAO;
 import com.globalsoft.dao.InputMaterialsDAO;
 import com.globalsoft.dao.OutputMaterialsDAO;
@@ -15,6 +16,7 @@ import com.globalsoft.dao.SubCategoryDAO;
 import com.globalsoft.dao.SupplierDAO;
 import com.globalsoft.dao.UserDAO;
 import com.globalsoft.entities.Category;
+import com.globalsoft.entities.CentroCusto;
 import com.globalsoft.entities.Client;
 import com.globalsoft.entities.InputMaterials;
 import com.globalsoft.entities.OutputMaterials;
@@ -37,6 +39,7 @@ public class Facade {
 	private InputMaterialsBO inputBO;
 	private OutputMaterialsBO outputBO;
 	private CategoryBO categoryBO;
+	private CentroCustoBO centrocustoBO;
 	private SubCategoryBO subCategoryBO;
 
 	private Facade() {
@@ -62,6 +65,8 @@ public class Facade {
 		outputBO = new OutputMaterialsBO(new OutputMaterialsDAO());
 		categoryBO = new CategoryBO(new CategoryBO(new CategoryDAO()));
 		subCategoryBO = new SubCategoryBO(new SubCategoryDAO());
+		centrocustoBO = new CentroCustoBO(new CentroCustoDAO());
+		
 	}
 
 	public boolean exists(Serializable key) throws Exception {
@@ -406,5 +411,37 @@ public class Facade {
 			Map<String, Object> parameters) {
 		return subCategoryBO.findUniqueByHQL(hql, parameters);
 	}
-
+	
+	public void create(CentroCusto entity) throws Exception{
+		centrocustoBO.create(entity);
+	}
+	
+	public void update(CentroCusto entity) throws Exception{
+		centrocustoBO.update(entity);
+	}
+	
+	public void removeCentroCusto(Serializable key) throws Exception{
+		centrocustoBO.remove(key);
+	}
+	
+	public CentroCusto findCentroCusto(Serializable key) throws Exception{
+		return centrocustoBO.find(key);
+	}
+	
+	public CentroCusto[] findAllCentroCusto() throws Exception{
+		return centrocustoBO.findAll();
+	}
+	
+	public Collection<CentroCusto> filter(CentroCusto entity){
+		return centrocustoBO.filter(entity);
+	}
+	
+	public Collection<CentroCusto> findCentroCustoCollectionByHQL(String hql, Map<String, Object> parameters){
+		return centrocustoBO.findCollectionByHQL(hql, parameters);
+	}
+	
+	public CentroCusto findCentroCustoUniqueByHQL(String hql, Map<String, Object> parameters) {
+		return centrocustoBO.findUniqueByHQL(hql, parameters);
+	}
+	
 }

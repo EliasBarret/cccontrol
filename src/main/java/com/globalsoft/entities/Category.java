@@ -33,7 +33,7 @@ public class Category extends BasicEntity {
 	}
 	public Boolean validate() throws Exception {
 		if (nome == null) {
-			throw new Exception("Nome n„o informado!");
+			throw new Exception("Nome n√£o informado!");
 		}		
 		return Boolean.TRUE;
 	}		

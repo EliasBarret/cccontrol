@@ -10,6 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -28,6 +29,7 @@ import javax.swing.table.DefaultTableModel;
 
 import com.globalsoft.entities.BasicEntity;
 import com.globalsoft.entities.Entity;
+import com.globalsoft.entities.Product;
 import com.globalsoft.entities.Supplier;
 import com.globalsoft.gui.SubCategoryView;
 
@@ -343,6 +345,55 @@ public class Util {
 	
 	public static Double getStringAsDouble(String value){
 		return Double.valueOf(value != null && !value.isEmpty() ? value : "0");
+	}
+
+	public static <T> void createTableModel2(JTable table, String[] columnNames, Collection<T> list) {
+		DefaultTableModel model = new DefaultTableModel(columnNames, 0) {
+			private static final long serialVersionUID = 3042308105275794952L;
+
+			public boolean isCellEditable(int row, int column) {
+				return false;
+			};
+		};
+		
+		try {
+			String[] line = null;
+			Field field = null;
+			Class<?> superClass = null;
+			
+			if (list != null && list.size() > 0) {
+				for (int i = 0; i < list.size(); i++) {
+					line = new String[columnNames.length];
+					for (int j = 0; j < columnNames.length; j++) {
+						
+						//int t = list.get(i);
+						
+						//superClass = t.getClass().getSuperclass();
+						
+						try{
+							field = list.getClass().getDeclaredField(getFieldName(columnNames[j]));
+						}catch(NoSuchFieldException sfe) { 
+							while (field == null && superClass != null) {
+								field = superClass.getDeclaredField(getFieldName(columnNames[j]));							
+								superClass = superClass.getSuperclass();
+							} 
+						}						
+						if (field != null) {
+							field.setAccessible(true);
+							line[j] = String.valueOf(field.get(list));
+							field = null;
+						}
+					}
+					model.addRow(line);
+				}
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		table.setModel(model);
+		table.createDefaultColumnsFromModel();
+		
+		
 	}
 	
 }

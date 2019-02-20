@@ -214,11 +214,11 @@ public class InputMaterials extends BasicEntity {
 		} else {
 			fornecedor.validate();
 		}
-		if(centrocusto == null){
-			throw new Exception(Messages.INVALID_CENTERCOST);
-		}else{
-			centrocusto.validate();
-		}
+//		if(centrocusto == null){
+//			throw new Exception(Messages.INVALID_CENTERCOST);
+//		}else{
+//			centrocusto.validate();
+//		}
 		if (notaFiscal == null || notaFiscal.isEmpty()
 				|| !notaFiscal.matches(Constants.ONLY_NUMBERS_REGEX)) {
 			throw new Exception(Messages.INVALID_FIELD + "Nota Fiscal");
@@ -231,13 +231,13 @@ public class InputMaterials extends BasicEntity {
 		}
 		if (valorUnitario == null || valorUnitario.isEmpty()
 				|| !valorUnitario.matches(Constants.ONLY_NUMBERS_REGEX)) {
-			throw new Exception(Messages.INVALID_FIELD + "Valor Unitário");
+			throw new Exception(Messages.INVALID_FIELD + "Valor Unitï¿½rio");
 		}
 
 		/*
 		 * if (valorTotal == null || valorTotal.isEmpty() ||
 		 * !valorTotal.matches(Constants.ONLY_NUMBERS_REGEX)) { // Sera Feito
-		 * uma calculo a partir do valor unitário e Quantidade throw new
+		 * uma calculo a partir do valor unitï¿½rio e Quantidade throw new
 		 * Exception(Messages.INVALID_FIELD + "Valor Total"); }
 		 */
 

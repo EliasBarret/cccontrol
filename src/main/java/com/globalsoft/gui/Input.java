@@ -51,9 +51,15 @@ public class Input extends JFrame {
 	private JTextField txtFaxFornecedor;
 	private JTextPane txtObsComments;
 	private JTable table;
+	private String[] columnNames = { "Id", "Nome", "Estoque", "Quantidade", "Quantidade Atual"};
+	
 	private Collection<Product> listaProdutos;
+	
 
 	public Input() {
+		
+		
+		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 596, 468);
 
@@ -218,7 +224,7 @@ public class Input extends JFrame {
 		JButton button_4 = new JButton("Add");
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// adicionar numa grid !!
+				// adicionar numa grid os produtos e quando clicar em salvar da entrada em todos os produtos !!
 			}
 		});
 		button_4.setIcon(new ImageIcon("Icones\\accept.png"));
@@ -405,6 +411,7 @@ public class Input extends JFrame {
 						listaProdutos.add(Facade.getInstance().findProduct(
 								Long.valueOf(idProduto)));						
 					}
+					//createTableOfProducts(listaProdutos);
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -422,4 +429,6 @@ public class Input extends JFrame {
 		table = new JTable();
 		scrollPane_1.setViewportView(table);
 	}
+	
+	
 }

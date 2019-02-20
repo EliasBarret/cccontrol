@@ -117,13 +117,13 @@ public class CategoryView extends JFrame {
 			}
 		});
 		btnDelete.setIcon(new ImageIcon("Icones\\Delete.png"));
-		btnDelete.setBounds(10, 11, 56, 48);
+		btnDelete.setBounds(78, 11, 56, 48);
 		panel.add(btnDelete);
 
 		JLabel lblDelete = new JLabel("Excluir");
 		lblDelete.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDelete.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblDelete.setBounds(10, 55, 56, 25);
+		lblDelete.setBounds(78, 55, 56, 25);
 		panel.add(lblDelete);
 
 		JButton btnExit = new JButton("");
@@ -147,6 +147,16 @@ public class CategoryView extends JFrame {
 		lblCategoria.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblCategoria.setBounds(142, 11, 193, 58);
 		panel.add(lblCategoria);
+		
+		JButton btnAtualizar = new JButton("");
+		btnAtualizar.setBounds(10, 11, 56, 48);
+		panel.add(btnAtualizar);
+		
+		JLabel lblAtualizar = new JLabel("Atualizar");
+		lblAtualizar.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAtualizar.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblAtualizar.setBounds(10, 55, 56, 25);
+		panel.add(lblAtualizar);
 
 		if (isSelectFrame) {
 
@@ -168,7 +178,8 @@ public class CategoryView extends JFrame {
 		contentPane.add(txtNome);
 		txtNome.setColumns(10);
 
-		JLabel lblNomeCategoria = new JLabel("Nome Da Categoria");
+		JLabel lblNomeCategoria = new JLabel("Nome Categoria");
+		lblNomeCategoria.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNomeCategoria.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		lblNomeCategoria.setBounds(20, 102, 113, 34);
 		contentPane.add(lblNomeCategoria);

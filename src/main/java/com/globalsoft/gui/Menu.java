@@ -20,6 +20,7 @@ import javax.swing.border.EtchedBorder;
 
 import com.globalsoft.business.Facade;
 import javax.swing.JTabbedPane;
+import java.awt.Dialog.ModalExclusionType;
 
 public class Menu extends JFrame {
 
@@ -48,9 +49,10 @@ public class Menu extends JFrame {
 	 * Create the frame.
 	 */
 	public Menu() {
+		setResizable(false);
 		setExtendedState(Frame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 1471, 537);
 
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -112,7 +114,7 @@ public class Menu extends JFrame {
 
 		JPanel panel = new JPanel();
 		panel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		panel.setBounds(10, 11, 1342, 81);
+		panel.setBounds(10, 11, 1427, 80);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
@@ -132,7 +134,7 @@ public class Menu extends JFrame {
 
 		JButton btRelatorio = new JButton("");
 		btRelatorio.setIcon(new ImageIcon("Icones\\280_32x32.png"));
-		btRelatorio.setBounds(1201, 11, 56, 48);
+		btRelatorio.setBounds(1282, 11, 56, 48);
 		panel.add(btRelatorio);
 
 		JButton button_3 = new JButton("");
@@ -143,7 +145,7 @@ public class Menu extends JFrame {
 		});
 		button_3.setIcon(new ImageIcon(
 				"Icones\\1448763830_xfce-system-exit.png"));
-		button_3.setBounds(1267, 11, 65, 48);
+		button_3.setBounds(1350, 11, 65, 48);
 		panel.add(button_3);
 
 		JLabel lblNovoCadastro = new JLabel("Produtos");
@@ -155,19 +157,19 @@ public class Menu extends JFrame {
 		JLabel lblRelatrio = new JLabel("Relat\u00F3rio");
 		lblRelatrio.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		lblRelatrio.setHorizontalAlignment(SwingConstants.CENTER);
-		lblRelatrio.setBounds(1201, 56, 56, 25);
+		lblRelatrio.setBounds(1282, 56, 56, 25);
 		panel.add(lblRelatrio);
 
 		JLabel lblSair = new JLabel("Sair");
 		lblSair.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		lblSair.setHorizontalAlignment(SwingConstants.CENTER);
-		lblSair.setBounds(1267, 56, 65, 25);
+		lblSair.setBounds(1350, 56, 65, 25);
 		panel.add(lblSair);
 
 		JLabel lblClientes = new JLabel("Solicitantes");
 		lblClientes.setHorizontalAlignment(SwingConstants.CENTER);
 		lblClientes.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblClientes.setBounds(177, 56, 56, 25);
+		lblClientes.setBounds(167, 56, 71, 25);
 		panel.add(lblClientes);
 
 		JButton btCliente = new JButton("");
@@ -257,15 +259,5 @@ public class Menu extends JFrame {
 		});
 		button.setBounds(433, 11, 56, 48);
 		panel.add(button);
-		
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.BOTTOM);
-		tabbedPane.setBounds(10, 103, 1342, 591);
-		contentPane.add(tabbedPane);
-		
-		JPanel panel_1 = new JPanel();
-		tabbedPane.addTab("Status Estoque", new ImageIcon("Icones\\cart.png"), panel_1, null);
-		
-		JPanel panel_2 = new JPanel();
-		tabbedPane.addTab("Status Produtos", new ImageIcon("Icones\\lorry.png"), panel_2, null);
 	}
 }
