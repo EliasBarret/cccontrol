@@ -45,8 +45,8 @@ public class CentroDeCusto extends JFrame {
 	}
 	
 	private void createTableModel(CentroCusto[] values) {
-		String[] columns = { "CÃ³digo", "Nome" };
-		DefaultTableModel model = new DefaultTableModel(columns, 1) {
+		String[] columns = { "Id","Código", "Nome" };
+		DefaultTableModel model = new DefaultTableModel(columns, 2) {
 			private static final long serialVersionUID = 8997062589770807215L;
 
 			@Override
@@ -60,6 +60,7 @@ public class CentroDeCusto extends JFrame {
 				line = new String[columns.length];
 				line[0] = String.valueOf(c.getCodigo());
 				line[1] = String.valueOf(c.getContrato());
+				line[2] = String.valueOf(c.getId());
 				model.addRow(line);
 			}
 		}
@@ -147,54 +148,59 @@ public class CentroDeCusto extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JButton btnSalvar = new JButton("");
-		btnSalvar.addActionListener(new ActionListener() {
+		JButton btnNovo = new JButton("");
+		btnNovo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				CentroCusto cat = Util.getScreenData(CentroDeCusto.this, CentroCusto.class);
-				try {
-					if (cat.getCodigo() == null) {
-						Facade.getInstance().create(cat);
-					} else {
-						Facade.getInstance().update(cat);
-					}
-					JOptionPane.showMessageDialog(CentroDeCusto.this, "Registro salvo com sucesso.");
-					Util.clearScreen(CentroDeCusto.this);
-					createTableModel(Facade.getInstance().findAllCentroCusto());
-				} catch (Exception e1) {
-					JOptionPane.showMessageDialog(CentroDeCusto.this, e1.getMessage(), "Error",
-							JOptionPane.ERROR_MESSAGE);
-				}
+//				CentroCusto cat = Util.getScreenData(CentroDeCusto.this, CentroCusto.class);
+//				try {
+//					if (cat.getCodigo() == null) {
+//						Facade.getInstance().create(cat);
+//					} else {
+//						Facade.getInstance().update(cat);
+//					}
+//					JOptionPane.showMessageDialog(CentroDeCusto.this, "Registro salvo com sucesso.");
+//					Util.clearScreen(CentroDeCusto.this);
+//					createTableModel(Facade.getInstance().findAllCentroCusto());
+//				} catch (Exception e1) {
+//					JOptionPane.showMessageDialog(CentroDeCusto.this, e1.getMessage(), "Error",
+//							JOptionPane.ERROR_MESSAGE);
+//				}
+				
+				CadCentroCusto view = new CadCentroCusto();
+				view.setLocale(null);
+				view.setVisible(true);
 			}
 		});
-		btnSalvar.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/8439_32x32.png"));
-		btnSalvar.setBounds(10, 11, 56, 48);
-		panel.add(btnSalvar);
+		btnNovo.setIcon(new ImageIcon("C:\\MV\\repo\\pessoal\\cccontrol\\Icones\\icons8-editar-32.png"));
+		btnNovo.setBounds(10, 11, 56, 48);
+		panel.add(btnNovo);
 		
-		JButton btnAtualizar = new JButton("");
-		btnAtualizar.addActionListener(new ActionListener() {
+		JButton btnEditar = new JButton("");
+		btnEditar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				int index = -1;
 				index = table.getSelectedRow();
-				if (index > -1) {
-					String id = (String) table.getValueAt(index, 0);
+				
+				if (index > -1 ){
+					String id = (String) table.getValueAt(index, 2);
 					try {
-						CentroCusto p = Facade.getInstance().findCentroCusto(
-								Long.valueOf(id));
-						if (p != null) {
-						
-						
-						
+						CentroCusto cc = Facade.getInstance().findCentroCusto(Long.valueOf(id));
+						if(cc != null){
+							CadCentroCusto cadastro = new CadCentroCusto(cc);
+							cadastro.setVisible(true);
 						}
-					} catch (Exception e1) {
-						e1.printStackTrace();
+						createTableModel(Facade.getInstance().findAllCentroCusto());
+					} catch (Exception e2) {
+						e2.printStackTrace();
 					}
 				}
+				
 			}
 		});
-		btnAtualizar.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/Button_Refresh_Icon_32.png"));
-		btnAtualizar.setBounds(76, 11, 56, 48);
-		panel.add(btnAtualizar);
+		btnEditar.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/Button_Refresh_Icon_32.png"));
+		btnEditar.setBounds(76, 11, 56, 48);
+		panel.add(btnEditar);
 		
 		JButton btnSair = new JButton("");
 		btnSair.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/exit.png"));
@@ -229,7 +235,7 @@ public class CentroDeCusto extends JFrame {
 		//btnExcluir.setVisible(isSelectFrame);
 		panel.add(btnExcluir);
 		
-		JLabel lblAtualizar = new JLabel("Atualizar");
+		JLabel lblAtualizar = new JLabel("Editar");
 		lblAtualizar.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		lblAtualizar.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAtualizar.setBounds(76, 55, 56, 25);
@@ -262,7 +268,7 @@ public class CentroDeCusto extends JFrame {
 			panel.add(lblSelecionar);
 		}	
 		
-		JLabel lblSalvar = new JLabel("Salvar");
+		JLabel lblSalvar = new JLabel("Novo");
 		lblSalvar.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSalvar.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		lblSalvar.setBounds(10, 55, 56, 25);

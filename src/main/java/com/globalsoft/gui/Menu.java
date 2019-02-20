@@ -49,10 +49,11 @@ public class Menu extends JFrame {
 	 * Create the frame.
 	 */
 	public Menu() {
-		setResizable(false);
+		//setResizable(false);
 		setExtendedState(Frame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1471, 537);
+		setVisible(true);
+	//	setBounds(100, 100, 1471, 537);
 
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -128,7 +129,7 @@ public class Menu extends JFrame {
 			}
 
 		});
-		btProduto.setIcon(new ImageIcon("Icones\\1448763544_deliverables.png"));
+		btProduto.setIcon(new ImageIcon("C:\\MV\\repo\\pessoal\\cccontrol\\Icones\\produto.png"));
 		btProduto.setBounds(10, 11, 56, 48);
 		panel.add(btProduto);
 
