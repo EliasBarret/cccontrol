@@ -207,7 +207,7 @@ public class CadastroSolicitante extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		button.setIcon(new ImageIcon("Icones\\zoom.png"));
+		button.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		button.setToolTipText("Cadastrar Fornecedor");
 		button.setBounds(126, 156, 28, 28);
 		panel.add(button);

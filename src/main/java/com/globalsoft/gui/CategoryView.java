@@ -116,7 +116,7 @@ public class CategoryView extends JFrame {
 				}
 			}
 		});
-		btnDelete.setIcon(new ImageIcon("Icones\\Delete.png"));
+		btnDelete.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/excluir.png"));
 		btnDelete.setBounds(78, 11, 56, 48);
 		panel.add(btnDelete);
 
@@ -127,7 +127,7 @@ public class CategoryView extends JFrame {
 		panel.add(lblDelete);
 
 		JButton btnExit = new JButton("");
-		btnExit.setIcon(new ImageIcon("Icones\\1448763830_xfce-system-exit.png"));
+		btnExit.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/sair.png"));
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();
@@ -149,6 +149,7 @@ public class CategoryView extends JFrame {
 		panel.add(lblCategoria);
 		
 		JButton btnAtualizar = new JButton("");
+		btnAtualizar.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/salvar.png"));
 		btnAtualizar.setBounds(10, 11, 56, 48);
 		panel.add(btnAtualizar);
 		

@@ -110,7 +110,7 @@ public class SubCategoryView extends JFrame {
 				}
 			}
 		});
-		btnDelete.setIcon(new ImageIcon("Icones\\Delete.png"));
+		btnDelete.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/excluir.png"));
 		btnDelete.setBounds(10, 11, 56, 48);
 		panel.add(btnDelete);
 
@@ -121,7 +121,7 @@ public class SubCategoryView extends JFrame {
 		panel.add(lblDelete);
 
 		JButton btnExit = new JButton("");
-		btnExit.setIcon(new ImageIcon("Icones\\1448763830_xfce-system-exit.png"));
+		btnExit.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/sair.png"));
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();
@@ -136,10 +136,10 @@ public class SubCategoryView extends JFrame {
 		lblExit.setBounds(345, 55, 56, 25);
 		panel.add(lblExit);
 
-		JLabel lblCategoria = new JLabel("SubCategoria");
+		JLabel lblCategoria = new JLabel("SUB-CATEGORIA");
 		lblCategoria.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCategoria.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblCategoria.setBounds(142, 11, 193, 58);
+		lblCategoria.setBounds(139, 11, 196, 58);
 		panel.add(lblCategoria);
 
 		if (isSelectFrame) {
@@ -162,8 +162,8 @@ public class SubCategoryView extends JFrame {
 		contentPane.add(txtNome);
 		txtNome.setColumns(10);
 
-		JLabel lblNomeCategoria = new JLabel("Nome Da SubCategoria");
-		lblNomeCategoria.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		JLabel lblNomeCategoria = new JLabel("SUB-CATEGORIA");
+		lblNomeCategoria.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNomeCategoria.setBounds(12, 131, 123, 34);
 		contentPane.add(lblNomeCategoria);
 
@@ -197,7 +197,8 @@ public class SubCategoryView extends JFrame {
 		btnAdd.setBounds(348, 131, 73, 29);
 		contentPane.add(btnAdd);
 
-		JLabel labelCategoria = new JLabel("Categoria");
+		JLabel labelCategoria = new JLabel("CATEGORIA");
+		labelCategoria.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		labelCategoria.setBounds(10, 112, 113, 14);
 		contentPane.add(labelCategoria);
 

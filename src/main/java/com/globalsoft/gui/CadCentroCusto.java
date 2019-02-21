@@ -16,6 +16,9 @@ import javax.swing.border.EtchedBorder;
 import com.globalsoft.business.Facade;
 import com.globalsoft.entities.CentroCusto;
 import com.globalsoft.util.Util;
+import javax.swing.ImageIcon;
+import java.awt.Color;
+import javax.swing.UIManager;
 
 public class CadCentroCusto extends JFrame {
 
@@ -116,6 +119,7 @@ public class CadCentroCusto extends JFrame {
 		panel.setLayout(null);
 		
 		JButton brnSalvar = new JButton("");
+		brnSalvar.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/salvar.png"));
 		brnSalvar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -136,6 +140,7 @@ public class CadCentroCusto extends JFrame {
 		panel.add(brnSalvar);
 		
 		JButton btnSair = new JButton("");
+		btnSair.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/sair.png"));
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -169,7 +174,8 @@ public class CadCentroCusto extends JFrame {
 		panel.add(lblNovo);
 		
 		txtCodigo = new JTextField();
-		txtCodigo.setBounds(145, 11, 48, 50);
+		txtCodigo.setBackground(UIManager.getColor("ComboBox.background"));
+		txtCodigo.setBounds(145, 28, 48, 33);
 		panel.add(txtCodigo);
 		txtCodigo.setHorizontalAlignment(SwingConstants.CENTER);
 		txtCodigo.setEditable(false);

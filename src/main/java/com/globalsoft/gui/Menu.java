@@ -129,12 +129,12 @@ public class Menu extends JFrame {
 			}
 
 		});
-		btProduto.setIcon(new ImageIcon("C:\\MV\\repo\\pessoal\\cccontrol\\Icones\\produto.png"));
+		btProduto.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/produto.png"));
 		btProduto.setBounds(10, 11, 56, 48);
 		panel.add(btProduto);
 
 		JButton btRelatorio = new JButton("");
-		btRelatorio.setIcon(new ImageIcon("Icones\\280_32x32.png"));
+		btRelatorio.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/arquivo.png"));
 		btRelatorio.setBounds(1282, 11, 56, 48);
 		panel.add(btRelatorio);
 
@@ -144,8 +144,7 @@ public class Menu extends JFrame {
 				dispose();
 			}
 		});
-		button_3.setIcon(new ImageIcon(
-				"Icones\\1448763830_xfce-system-exit.png"));
+		button_3.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/sair (2).png"));
 		button_3.setBounds(1350, 11, 65, 48);
 		panel.add(button_3);
 
@@ -182,7 +181,7 @@ public class Menu extends JFrame {
 
 			}
 		});
-		btCliente.setIcon(new ImageIcon("Icones\\User group.png"));
+		btCliente.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/pessoa.png"));
 		btCliente.setBounds(177, 11, 56, 48);
 		panel.add(btCliente);
 
@@ -194,7 +193,7 @@ public class Menu extends JFrame {
 
 		JButton btfornecedor = new JButton("");
 		btfornecedor
-				.setIcon(new ImageIcon("Icones\\1448763387_Supervisor.png"));
+				.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/fornecedor.png"));
 		btfornecedor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fornecedores view = new Fornecedores(false);
@@ -213,7 +212,7 @@ public class Menu extends JFrame {
 
 		JButton btEntrada = new JButton("");
 		btEntrada.setToolTipText("Entrada de Materiais");
-		btEntrada.setIcon(new ImageIcon("Icones\\Down.png"));
+		btEntrada.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/baixo.png"));
 		btEntrada.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Input view = new Input();
@@ -232,7 +231,7 @@ public class Menu extends JFrame {
 
 		JButton btSaida = new JButton("");
 		btSaida.setToolTipText("Saida de Materiais");
-		btSaida.setIcon(new ImageIcon("Icones\\Raise.png"));
+		btSaida.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/cima.png"));
 		btSaida.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Output view = new Output();
@@ -251,6 +250,7 @@ public class Menu extends JFrame {
 		panel.add(lblOcompra);
 
 		JButton button = new JButton("");
+		button.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/entradacar.png"));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				BuyOrder view = new BuyOrder();

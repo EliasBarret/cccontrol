@@ -34,9 +34,6 @@ public class CentroDeCusto extends JFrame {
 
 	private static final long serialVersionUID = 7167351565071980283L;
 	private JPanel contentPane;
-	private JTextField txtCodigo;
-	private JTextField txtContrato;
-	private JTextField txtGestorContrato;
 	private JTable table;
 	private CentroCusto selecionado;
 	
@@ -45,7 +42,7 @@ public class CentroDeCusto extends JFrame {
 	}
 	
 	private void createTableModel(CentroCusto[] values) {
-		String[] columns = { "Id","Código", "Nome" };
+		String[] columns = { "Id","Cï¿½digo", "Nome" };
 		DefaultTableModel model = new DefaultTableModel(columns, 2) {
 			private static final long serialVersionUID = 8997062589770807215L;
 
@@ -99,48 +96,12 @@ public class CentroDeCusto extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		txtCodigo = new JTextField();
-		txtCodigo.setHorizontalAlignment(SwingConstants.CENTER);
-		txtCodigo.setBounds(10, 120, 166, 20);
-		contentPane.add(txtCodigo);
-		txtCodigo.setColumns(10);
-		
-		txtContrato = new JTextField();
-		txtContrato.setHorizontalAlignment(SwingConstants.CENTER);
-		txtContrato.setColumns(10);
-		txtContrato.setBounds(221, 120, 179, 20);
-		contentPane.add(txtContrato);
-		
-		JLabel lblCentroDeCusto = new JLabel("N\u00BA Centro de Custo");
-		lblCentroDeCusto.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCentroDeCusto.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblCentroDeCusto.setBounds(10, 102, 166, 20);
-		contentPane.add(lblCentroDeCusto);
-		
-		JLabel lblContrato = new JLabel("Contrato");
-		lblContrato.setHorizontalAlignment(SwingConstants.CENTER);
-		lblContrato.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblContrato.setBounds(221, 102, 179, 20);
-		contentPane.add(lblContrato);
-		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 151, 605, 281);
+		scrollPane.setBounds(10, 103, 605, 329);
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
 		scrollPane.setViewportView(table);
-		
-		txtGestorContrato = new JTextField();
-		txtGestorContrato.setHorizontalAlignment(SwingConstants.CENTER);
-		txtGestorContrato.setColumns(10);
-		txtGestorContrato.setBounds(449, 120, 166, 20);
-		contentPane.add(txtGestorContrato);
-		
-		JLabel lblGestorContrato = new JLabel("Gestor do Contrato");
-		lblGestorContrato.setHorizontalAlignment(SwingConstants.CENTER);
-		lblGestorContrato.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblGestorContrato.setBounds(449, 99, 166, 20);
-		contentPane.add(lblGestorContrato);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
@@ -171,7 +132,7 @@ public class CentroDeCusto extends JFrame {
 				view.setVisible(true);
 			}
 		});
-		btnNovo.setIcon(new ImageIcon("C:\\MV\\repo\\pessoal\\cccontrol\\Icones\\icons8-editar-32.png"));
+		btnNovo.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/add.png"));
 		btnNovo.setBounds(10, 11, 56, 48);
 		panel.add(btnNovo);
 		
@@ -198,12 +159,12 @@ public class CentroDeCusto extends JFrame {
 				
 			}
 		});
-		btnEditar.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/Button_Refresh_Icon_32.png"));
+		btnEditar.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/editar.png"));
 		btnEditar.setBounds(76, 11, 56, 48);
 		panel.add(btnEditar);
 		
 		JButton btnSair = new JButton("");
-		btnSair.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/exit.png"));
+		btnSair.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/sair.png"));
 		btnSair.setBounds(541, 11, 56, 48);
 		panel.add(btnSair);
 		
@@ -230,7 +191,7 @@ public class CentroDeCusto extends JFrame {
 			
 			}
 		});
-		btnExcluir.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/Delete.png"));
+		btnExcluir.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/excluir.png"));
 		btnExcluir.setBounds(142, 11, 56, 48);
 		//btnExcluir.setVisible(isSelectFrame);
 		panel.add(btnExcluir);

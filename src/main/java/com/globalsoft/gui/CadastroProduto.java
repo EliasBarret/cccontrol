@@ -309,17 +309,6 @@ public class CadastroProduto extends JFrame {
 		txtReferencia.setBounds(120, 118, 100, 20);
 		panel.add(txtReferencia);
 
-		JButton btNewFornec = new JButton("");
-		btNewFornec.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		});
-		btNewFornec.setIcon(new ImageIcon("Icones\\arrow_refresh.png"));
-		btNewFornec.setToolTipText("Cadastrar Fornecedor");
-		btNewFornec.setBounds(638, 157, 28, 28);
-		panel.add(btNewFornec);
-
 		JButton button = new JButton("");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -328,9 +317,9 @@ public class CadastroProduto extends JFrame {
 				view.setVisible(true);
 			}
 		});
-		button.setIcon(new ImageIcon("Icones\\add.png"));
+		button.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		button.setToolTipText("Cadastrar Fornecedor");
-		button.setBounds(607, 157, 28, 28);
+		button.setBounds(618, 157, 28, 28);
 		panel.add(button);
 		
 		txtEstoque = new JTextField();
@@ -351,22 +340,16 @@ public class CadastroProduto extends JFrame {
 		contentPane.add(panel_1);
 
 		cbCatego = new JComboBox<Category>();
-		cbCatego.setBounds(10, 26, 247, 20);
+		cbCatego.setBounds(10, 26, 280, 20);
 		panel_1.add(cbCatego);
 
 		cbSubcat = new JComboBox<SubCategory>();
-		cbSubcat.setBounds(334, 26, 264, 20);
+		cbSubcat.setBounds(308, 26, 290, 20);
 		panel_1.add(cbSubcat);
-
-		JButton btnNewCatego = new JButton("");
-		btnNewCatego.setIcon(new ImageIcon("Icones\\arrow_refresh.png"));
-		btnNewCatego.setToolTipText("Cadastar Categoria");
-		btnNewCatego.setBounds(296, 18, 28, 28);
-		panel_1.add(btnNewCatego);
 
 		JLabel lblSub = new JLabel("Subcategoria");
 		lblSub.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblSub.setBounds(334, 11, 332, 14);
+		lblSub.setBounds(308, 11, 290, 14);
 		panel_1.add(lblSub);
 
 		JLabel lblCategoria = new JLabel("Categoria");
@@ -375,22 +358,10 @@ public class CadastroProduto extends JFrame {
 		panel_1.add(lblCategoria);
 
 		JButton btnNewSubcat = new JButton("");
-		btnNewSubcat.setIcon(new ImageIcon("Icones\\arrow_refresh.png"));
+		btnNewSubcat.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		btnNewSubcat.setToolTipText("Cadastar Subcategoria");
-		btnNewSubcat.setBounds(638, 18, 28, 28);
+		btnNewSubcat.setBounds(622, 18, 28, 28);
 		panel_1.add(btnNewSubcat);
-
-		JButton button_1 = new JButton("");
-		button_1.setIcon(new ImageIcon("Icones\\add.png"));
-		button_1.setToolTipText("Cadastrar Fornecedor");
-		button_1.setBounds(262, 18, 28, 28);
-		panel_1.add(button_1);
-
-		JButton button_2 = new JButton("");
-		button_2.setIcon(new ImageIcon("Icones\\add.png"));
-		button_2.setToolTipText("Cadastrar Fornecedor");
-		button_2.setBounds(608, 18, 28, 28);
-		panel_1.add(button_2);
 
 		JPanel panel_2 = new JPanel();
 		panel_2.setLayout(null);

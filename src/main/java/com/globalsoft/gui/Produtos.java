@@ -111,13 +111,12 @@ public class Produtos extends JFrame {
 				}
 			}
 		});
-		button.setIcon(new ImageIcon("Icones\\11425_32x32.png"));
+		button.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/editar.png"));
 		button.setBounds(76, 11, 56, 48);
 		panel.add(button);
 
 		JButton button_2 = new JButton("");
-		button_2.setIcon(new ImageIcon(
-				"Icones\\1448763830_xfce-system-exit.png"));
+		button_2.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/sair.png"));
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();
@@ -126,7 +125,7 @@ public class Produtos extends JFrame {
 		button_2.setBounds(1207, 11, 65, 48);
 		panel.add(button_2);
 
-		JLabel lblAtualizar = new JLabel("Atualizar");
+		JLabel lblAtualizar = new JLabel("Editar");
 		lblAtualizar.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAtualizar.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		lblAtualizar.setBounds(76, 56, 56, 25);
@@ -165,12 +164,12 @@ public class Produtos extends JFrame {
 				}
 			}
 		});
-		button_1.setIcon(new ImageIcon("Icones\\Delete.png"));
+		button_1.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/excluir.png"));
 		button_1.setBounds(142, 11, 56, 48);
 		panel.add(button_1);
 
 		JButton button_3 = new JButton("");
-		button_3.setIcon(new ImageIcon("Icones\\8440_32x32.png"));
+		button_3.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/add.png"));
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				CadastroProduto view = new CadastroProduto();
@@ -254,7 +253,7 @@ public class Produtos extends JFrame {
 		});
 
 		JButton btnSelecionar = new JButton("");
-		btnSelecionar.setIcon(new ImageIcon("Icones\\Yes.png"));
+		btnSelecionar.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/selecionar.png"));
 		btnSelecionar.setBounds(208, 11, 56, 48);
 		panel.add(btnSelecionar);
 		btnSelecionar.setVisible(isSelectFrame);

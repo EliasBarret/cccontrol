@@ -281,7 +281,7 @@ public class BuyOrder extends JFrame {
 				view.setVisible(true);
 			}
 		});
-		button_3.setIcon(new ImageIcon("Icones\\zoom.png"));
+		button_3.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		button_3.setToolTipText("Buscar Solicitante");
 		button_3.setBounds(672, 37, 28, 28);
 		panel_4.add(button_3);
@@ -402,7 +402,7 @@ public class BuyOrder extends JFrame {
 		panel_5.add(txtNomeForn);
 
 		JButton button_4 = new JButton("");
-		button_4.setIcon(new ImageIcon("Icones\\zoom.png"));
+		button_4.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fornecedores view = new Fornecedores(true);
@@ -601,7 +601,7 @@ public class BuyOrder extends JFrame {
 		btnAdd.setToolTipText("Add Produto");
 
 		JButton button_6 = new JButton("");
-		button_6.setIcon(new ImageIcon("Icones\\zoom.png"));
+		button_6.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				

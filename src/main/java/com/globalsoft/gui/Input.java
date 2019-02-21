@@ -164,7 +164,7 @@ public class Input extends JFrame {
 		txtNomeFornecedor.setColumns(10);
 
 		JButton button_3 = new JButton("");
-		button_3.setIcon(new ImageIcon("Icones\\zoom.png"));
+		button_3.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -293,7 +293,7 @@ public class Input extends JFrame {
 		panel.add(lblUnd);
 
 		JButton button = new JButton("");
-		button.setIcon(new ImageIcon("Icones\\zoom.png"));
+		button.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				final Produtos view = new Produtos(true);
@@ -393,7 +393,7 @@ public class Input extends JFrame {
 
 			}
 		});
-		button_1.setIcon(new ImageIcon("Icones\\zoom.png"));
+		button_1.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		button_1.setToolTipText("Buscar Centro de Custo");
 		button_1.setBounds(500, 66, 28, 28);
 		panel.add(button_1);

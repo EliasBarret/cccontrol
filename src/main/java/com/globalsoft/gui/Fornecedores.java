@@ -138,12 +138,12 @@ public class Fornecedores extends JFrame {
 				}
 			}
 		});
-		btnAtualizar.setIcon(new ImageIcon("Icones\\11425_32x32.png"));
+		btnAtualizar.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/editar.png"));
 		btnAtualizar.setBounds(76, 11, 56, 48);
 		panel.add(btnAtualizar);
 
 		JButton btnSair = new JButton("");
-		btnSair.setIcon(new ImageIcon("Icones\\1448763830_xfce-system-exit.png"));
+		btnSair.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/sair.png"));
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();
@@ -152,7 +152,7 @@ public class Fornecedores extends JFrame {
 		btnSair.setBounds(1207, 11, 65, 48);
 		panel.add(btnSair);
 
-		JLabel lblAtualizar = new JLabel("Atualizar");
+		JLabel lblAtualizar = new JLabel("Editar");
 		lblAtualizar.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAtualizar.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		lblAtualizar.setBounds(76, 56, 56, 25);
@@ -190,12 +190,12 @@ public class Fornecedores extends JFrame {
 				}
 			}
 		});
-		btnExcluir.setIcon(new ImageIcon("Icones\\Delete.png"));
+		btnExcluir.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/excluir.png"));
 		btnExcluir.setBounds(142, 11, 56, 48);
 		panel.add(btnExcluir);
 
 		JButton btnNovo = new JButton("");
-		btnNovo.setIcon(new ImageIcon("Icones\\8440_32x32.png"));
+		btnNovo.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/add.png"));
 		btnNovo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				CadastroFornecedor view = new CadastroFornecedor();
@@ -219,11 +219,11 @@ public class Fornecedores extends JFrame {
 		JLabel lblFornecedores = new JLabel("Fornecedores");
 		lblFornecedores.setHorizontalAlignment(SwingConstants.CENTER);
 		lblFornecedores.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblFornecedores.setBounds(208, 0, 473, 81);
+		lblFornecedores.setBounds(276, 0, 405, 81);
 		panel.add(lblFornecedores);
 
 		JButton btnSelecionar = new JButton("");
-		btnSelecionar.setIcon(new ImageIcon("Icones\\Yes.png"));
+		btnSelecionar.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/selecionar.png"));
 		btnSelecionar.setBounds(208, 11, 56, 48);
 		panel.add(btnSelecionar);
 		btnSelecionar.setVisible(isSelectFrame);
@@ -271,7 +271,7 @@ public class Fornecedores extends JFrame {
 							} else {
 								JOptionPane.showMessageDialog(
 										Fornecedores.this,
-										"Registro não encontrado.");
+										"Registro nï¿½o encontrado.");
 							}
 						} else {
 							sup = new Supplier();
@@ -284,7 +284,7 @@ public class Fornecedores extends JFrame {
 							} else {
 								JOptionPane
 										.showMessageDialog(Fornecedores.this,
-												"Não foram encontrados registros para os parametros passados.");
+												"Nï¿½o foram encontrados registros para os parametros passados.");
 							}
 						}
 					}

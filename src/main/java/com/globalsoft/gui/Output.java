@@ -95,10 +95,10 @@ public class Output extends JFrame {
 				String idRequester = txtMatricula.getText();
 				try {
 					if (idProduto == null || idProduto.isEmpty()) {
-						throw new Exception("Produto não informado");
+						throw new Exception("Produto nï¿½o informado");
 					}
 					if (idRequester == null || idRequester.isEmpty()) {
-						throw new Exception("Solicitante não informado");
+						throw new Exception("Solicitante nï¿½o informado");
 					}
 					Product p = Facade.getInstance().findProduct(
 							Long.valueOf(idProduto));
@@ -334,7 +334,7 @@ public class Output extends JFrame {
 
 		JLabel lblDescrio = new JLabel("Descri\u00E7\u00E3o");
 		lblDescrio.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblDescrio.setBounds(99, 11, 46, 14);
+		lblDescrio.setBounds(99, 11, 113, 14);
 		panel.add(lblDescrio);
 
 		JLabel lblUnd = new JLabel("Unidade");
@@ -343,7 +343,7 @@ public class Output extends JFrame {
 		panel.add(lblUnd);
 
 		JButton btnBuscaProd = new JButton("");
-		btnBuscaProd.setIcon(new ImageIcon("Icones\\zoom.png"));
+		btnBuscaProd.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		btnBuscaProd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				final Produtos view = new Produtos(true);
@@ -407,7 +407,7 @@ public class Output extends JFrame {
 				view.setVisible(true);
 			}
 		});
-		button_1.setIcon(new ImageIcon("Icones\\zoom.png"));
+		button_1.setIcon(new ImageIcon("/Users/elias/eclipse-workspace/cccontrol/Icones/lipinha.png"));
 		button_1.setToolTipText("Buscar Centro de Custo");
 		button_1.setBounds(140, 66, 28, 28);
 		panel.add(button_1);
